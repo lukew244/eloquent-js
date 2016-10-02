@@ -8,5 +8,4 @@ function findMinimum() {
   return min;
 }
 
-
 module.exports = findMinimum;
