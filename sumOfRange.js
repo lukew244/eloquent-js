@@ -5,10 +5,11 @@ function sum(arr) {
   return sum;
 }
 
-function range(start, end) {
-  arr = [];
-  for(var i=start; i <= end; i++) arr.push(i);
+function range(start, end, step) {
+  var arr = [];
+  step = (step !== undefined) ? step : 1;
+  for(var i=start; i !== end; i+= step) arr.push(i);
   return arr;
 }
 
-console.log(sum(range(1, 10)));
+console.log(sum(range(12, 3, -3)));
