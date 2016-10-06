@@ -13,5 +13,14 @@ function reverseInPlace(array) {
   return array;
 }
 
+function arrayToList (array) {
+  var list = {};
+  for (var i=(array.length - 1); i >= 0; i--) {
+      list = { value: i, rest: list};
+  }
+  return list;
+}
+
+console.log(arrayToList([1,2,3]));
 console.log(reverseArray([1,2,3,4,5]));
 console.log(reverseInPlace([1,2,3,4,5]));
