@@ -21,6 +21,18 @@ function arrayToList (array) {
   return list;
 }
 
+
+function listToArray(list) {
+  array = [];
+  for (var node = list; node; node = node.rest) {
+    if (node.value !== undefined) array.push(node.value);
+  }
+  return array;
+}
+
+
+
 console.log(arrayToList([1,2,3]));
+console.log(listToArray(arrayToList([1,2,3])));
 console.log(reverseArray([1,2,3,4,5]));
 console.log(reverseInPlace([1,2,3,4,5]));
